@@ -47,7 +47,7 @@ public class Tela extends JFrame implements ActionListener{
 		//Configurações do botão
 		
 		JButton btnSair2 = new JButton("SAIR");
-		btnSair2.setBounds((getX()-btnSair2.getX()/2), 300, 200, 50);
+		btnSair2.setBounds((getX()-btnSair2.getX()/2), 380, 200, 50);
 		btnSair2.setFont(new Font("Arial", Font.BOLD, 30));
 		btnSair2.setForeground(new Color(20,20,20));
 		btnSair2.setBackground(new Color(50,50,50));
@@ -60,7 +60,19 @@ public class Tela extends JFrame implements ActionListener{
 		btnHabWeb.setFont(new Font("Arial", Font.BOLD, 20));
 		btnHabWeb.setForeground(new Color(20,20,20));
 		btnHabWeb.setBackground(new Color(32, 198, 122));
+		//ação do actionlisterner nesse botão
 		btnHabWeb.addActionListener(this::abrirWebcam);
+		
+		
+		
+		JButton btnDesCamera = new JButton("Desativar CameraMouse");
+		btnDesCamera.setBounds((getX()-btnSair2.getX()/2)+100, 300, 300, 50);
+		btnDesCamera.setFont(new Font("Arial", Font.BOLD, 20));
+		btnDesCamera.setForeground(new Color(20,20,20));
+		btnDesCamera.setBackground(new Color(161, 13, 13));
+		//ação do actionlisterner nesse botão
+		btnDesCamera.addActionListener(this::desativarWebcam);
+		btnDesCamera.setVisible(true);
 		
 		
 		//imagem
@@ -70,6 +82,7 @@ public class Tela extends JFrame implements ActionListener{
 		//ADD AS TELAS NO PROJETO
 		add(btnSair2);
 		add(btnHabWeb);
+		add(btnDesCamera);
 		add(lblTitulo);
 		add(lblLogo3);
 		add(pnlpainel);
@@ -90,6 +103,11 @@ public class Tela extends JFrame implements ActionListener{
 		webcam.setVisible(true);
 		this.add(webcam);//adiciona no frame
 		
+	}
+	
+	public void desativarWebcam(ActionEvent e) {
+		//aqui será para desativar o cameramouse, mas por agora está apenas uma imagem estatica
+		lblLogo3.setVisible(false);
 	}
 	
 }
