@@ -1,4 +1,6 @@
 package br.com.fiap.beans;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -43,7 +45,7 @@ public class TelaLogin extends JFrame implements ActionListener, KeyListener{
 		
 		lblSenha = new JTextField();
 		lblSenha.setText("Digite sua senha:");
-		lblSenha.setBounds(100, 150, 300, 50);
+		lblSenha.setBounds(100, 170, 300, 50);
 		lblSenha.setVisible(true);
 		
 		lblEntrar = new JButton("Entrar");
@@ -51,6 +53,9 @@ public class TelaLogin extends JFrame implements ActionListener, KeyListener{
 		lblEntrar.setVisible(true);
 		
 		lblEntrar.addActionListener(this); // coloca ação no botão no evento actionListener
+		lblEntrar.setFont(new Font("Arial", Font.BOLD, 20));
+		lblEntrar.setForeground(new Color(20,20,20));
+		lblEntrar.setBackground(new Color(32, 198, 122));
 		
 		//tecla enteraqui faz a ação
 		addKeyListener(this);
