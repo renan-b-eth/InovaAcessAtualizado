@@ -21,8 +21,8 @@ public class Tela extends JFrame implements ActionListener{
 	JLabel lblLogo2 = new JLabel();
 	JPanel pnlpainel = new JPanel();
 	JButton btnSair = new JButton();
-	//private ImageIcon imagem = new ImageIcon(getClass().getResource("logo.png"));
-	//private JLabel lblLogo = new JLabel(imagem);
+	private ImageIcon imagem = new ImageIcon(getClass().getResource("..//Imagens//imagem.png"));
+	private JLabel lblLogo3 = new JLabel(imagem);
 	
 	
 	public Tela() {
@@ -62,10 +62,16 @@ public class Tela extends JFrame implements ActionListener{
 		btnHabWeb.setBackground(new Color(32, 198, 122));
 		btnHabWeb.addActionListener(this::abrirWebcam);
 		
+		
+		//imagem
+		lblLogo3.setVisible(false);
+		lblLogo3.setBounds((getX()-lblLogo3.getX()),10,205,170);
+		
 		//ADD AS TELAS NO PROJETO
 		add(btnSair2);
 		add(btnHabWeb);
 		add(lblTitulo);
+		add(lblLogo3);
 		add(pnlpainel);
 		validate();
 	}
@@ -78,7 +84,8 @@ public class Tela extends JFrame implements ActionListener{
 	
 	public void abrirWebcam(ActionEvent e) {
 		JOptionPane.showMessageDialog(null, "abriu a webcam", "InovaAcess", JOptionPane.WARNING_MESSAGE);
-		
+		//imagem estatico apenas de demonstração
+		lblLogo3.setVisible(true);
 		WebCam webcam = new WebCam();
 		webcam.setVisible(true);
 		this.add(webcam);//adiciona no frame
