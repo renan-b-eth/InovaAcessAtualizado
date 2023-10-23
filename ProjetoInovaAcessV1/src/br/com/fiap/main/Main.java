@@ -5,7 +5,7 @@ import br.com.fiap.beans.TelaLogin;
 
 public class Main {
 	public static void main(String[] args) {
-		//Tela t = new Tela();
-		TelaLogin t = new TelaLogin();
+		Tela t = new Tela();
+		//TelaLogin t = new TelaLogin();
 	}
 }

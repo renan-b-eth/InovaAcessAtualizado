@@ -26,7 +26,7 @@ public class Tela extends JFrame implements ActionListener{
 	
 	
 	public Tela() {
-		//System.loadLibrary(Core.NATIVE_LIBRARY_NAME); essa parte precisa pedir ajuda ao professor pois não atualiza a biblioteca
+		System.loadLibrary(Core.NATIVE_LIBRARY_NAME); //essa parte precisa pedir ajuda ao professor pois não atualiza a biblioteca
 		//Configuração da tela inicial
 		setTitle("InovaAcess - WEBCAM Mouse");
 		setSize(800,500);
